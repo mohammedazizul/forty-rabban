@@ -1,5 +1,5 @@
 import "./App.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import data from "./data/rabban.json";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -12,6 +12,15 @@ function App() {
   const toggleTheme = () => {
     setIsDarkMode(!isDarkMode);
   };
+
+  // Apply dark mode class to body element
+  useEffect(() => {
+    if (isDarkMode) {
+      document.body.classList.add("dark");
+    } else {
+      document.body.classList.remove("dark");
+    }
+  }, [isDarkMode]);
 
   const nextCard = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % data.length);

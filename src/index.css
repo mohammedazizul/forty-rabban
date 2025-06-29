@@ -1,9 +1,91 @@
 @import "tailwindcss";
 
-/* @theme {
-    --color-primary: #00D991;
-} */
+/* Light mode (default) */
+:root {
+    --color-background: 255 255 255;
+    --color-foreground: 15 23 42;
+    --color-card: 255 255 255;
+    --color-card-foreground: 15 23 42;
+    --color-border: 226 232 240;
+    --color-primary: 59 130 246;
+    --color-primary-foreground: 255 255 255;
+    --shadow-color: 0 0 0;
+    --shadow-opacity: 0.1;
+    --shadow-blur: 25px;
+    --shadow-spread: 0px;
+}
 
-/* .dark {
-    @apply bg-[#171923] text-white;
-} */
+/* Dark mode */
+.dark {
+    --color-background: 15 23 42;
+    --color-foreground: 248 250 252;
+    --color-card: 30 41 59;
+    --color-card-foreground: 248 250 252;
+    --color-border: 51 65 85;
+    --color-primary: 59 130 246;
+    --color-primary-foreground: 255 255 255;
+    --shadow-color: 0 0 0;
+    --shadow-opacity: 0.3;
+    --shadow-blur: 25px;
+    --shadow-spread: 0px;
+}
+
+/* Base styles */
+body {
+    background-color: rgb(var(--color-background));
+    color: rgb(var(--color-foreground));
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* Card styles */
+.card {
+    background-color: rgb(var(--color-card));
+    color: rgb(var(--color-card-foreground));
+    border-color: rgb(var(--color-border));
+    box-shadow:
+        0 10px 15px -3px rgb(var(--shadow-color) / var(--shadow-opacity)),
+        0 4px 6px -4px rgb(var(--shadow-color) / var(--shadow-opacity)),
+        0 0 0 1px rgb(var(--shadow-color) / 0.05);
+}
+
+/* Header shadow */
+header {
+    box-shadow:
+        0 4px 6px -1px rgb(var(--shadow-color) / var(--shadow-opacity)),
+        0 2px 4px -2px rgb(var(--shadow-color) / var(--shadow-opacity));
+}
+
+/* Smooth transitions for theme switching */
+* {
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Custom scrollbar for dark mode */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: rgb(243 244 246);
+}
+
+.dark ::-webkit-scrollbar-track {
+    background-color: rgb(31 41 55);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgb(209 213 219);
+    border-radius: 9999px;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+    background-color: rgb(75 85 99);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: rgb(156 163 175);
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+    background-color: rgb(107 114 128);
+}

@@ -14,22 +14,34 @@ function Card({ currentIndex, data, onNext, onPrev }) {
     <div className="max-w-2xl w-full">
       <div
         {...swipeHandlers}
-        className="backdrop-blur-lg rounded-2xl p-4 sm:p-6 md:p-8 shadow-2xl border cursor-grab active:cursor-grabbing relative flex items-center justify-center min-h-[400px]"
+        className="card backdrop-blur-lg rounded-2xl p-4 sm:p-6 md:p-8 border cursor-grab active:cursor-grabbing relative flex items-center justify-center min-h-[400px]"
       >
         <div className="text-center space-y-4 sm:space-y-6">
-          <p className="text-xl sm:text-2xl font-bold">
+          <p
+            className="text-xl sm:text-2xl font-bold"
+            style={{ color: "rgb(var(--color-card-foreground))" }}
+          >
             {data[currentIndex].id}
           </p>
-          <p className="text-2xl sm:text-3xl md:text-4xl font-['Amiri'] leading-loose tracking-wide">
+          <p
+            className="text-2xl sm:text-3xl md:text-4xl font-['Amiri'] leading-loose tracking-wide"
+            style={{ color: "rgb(var(--color-card-foreground))" }}
+          >
             {data[currentIndex].arabic}
           </p>
-          <p className="text-lg sm:text-xl italic">
+          <p
+            className="text-lg sm:text-xl italic"
+            style={{ color: "rgb(var(--color-card-foreground) / 0.8)" }}
+          >
             {data[currentIndex].translation_en}
           </p>
         </div>
 
         <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2">
-          <span className="text-sm sm:text-base">
+          <span
+            className="text-sm sm:text-base"
+            style={{ color: "rgb(var(--color-card-foreground) / 0.6)" }}
+          >
             {currentIndex + 1} / {data.length}
           </span>
         </div>
@@ -38,12 +50,14 @@ function Card({ currentIndex, data, onNext, onPrev }) {
           <div
             onClick={onPrev}
             className="cursor-pointer hover:opacity-100 transition-opacity duration-200 opacity-30"
+            style={{ color: "rgb(var(--color-card-foreground))" }}
           >
             <LeftArrowSVG />
           </div>
           <div
             onClick={onNext}
             className="cursor-pointer hover:opacity-100 transition-opacity duration-200 opacity-30"
+            style={{ color: "rgb(var(--color-card-foreground))" }}
           >
             <RightArrowSVG />
           </div>
@@ -53,4 +67,4 @@ function Card({ currentIndex, data, onNext, onPrev }) {
   );
 }
 
-export default Card; 
+export default Card;

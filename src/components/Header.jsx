@@ -3,8 +3,8 @@ import SunSVG from "./SVG/SunSVG";
 
 function Header({ isDarkMode, toggleTheme }) {
   return (
-    <div className={`h-full w-full ${isDarkMode ? "dark" : ""}`}>
-      <header className="w-full py-4 px-4 sm:px-6 md:px-8 shadow-lg">
+    <div className="h-full w-full">
+      <header className="w-full py-4 px-4 sm:px-6 md:px-8">
         <div className="max-w-2xl mx-auto">
           <div className="flex justify-between items-center">
             <div className="flex-1">
