@@ -12,7 +12,7 @@ function Header({ isDarkMode, toggleTheme }) {
                 Forty Rabbana from Al Quran
               </h1>
               <p className="text-center mt-2 text-sm sm:text-base">
-                A collection of 40 Rabban dua from Al Quran
+                A comprehensive collection of 40 beautiful "Rabbana" (Our Lord) duas from the Holy Quran with Arabic text, English translations, and beautiful typography. Perfect for daily prayers and spiritual reflection.
               </p>
             </div>
             <button
