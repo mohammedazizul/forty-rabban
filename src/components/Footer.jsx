@@ -7,10 +7,12 @@ function Footer() {
             © {new Date().getFullYear()} Forty Rabbana - 40 Beautiful Duas from
             Al Quran
           </p>
+          {/* 
           <p>
             May Almighty Allah bless us with understanding and implementation of
             these beautiful supplications
-          </p>
+          </p> 
+          */}
           <p className="mt-2 text-xs opacity-80">
             Developed with ❤️ by{" "}
             <a

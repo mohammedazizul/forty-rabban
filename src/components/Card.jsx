@@ -16,13 +16,15 @@ function Card({ currentIndex, data, onNext, onPrev }) {
         {...swipeHandlers}
         className="card backdrop-blur-lg rounded-2xl p-4 sm:p-6 md:p-8 cursor-grab active:cursor-grabbing relative flex items-center justify-center min-h-[400px]"
       >
-        <div className="text-center space-y-4 sm:space-y-6">
+        <div className="text-center pb-4 space-y-4 sm:space-y-6">
+          {/* 
           <p
             className="text-xl sm:text-2xl font-bold"
             style={{ color: "rgb(var(--color-card-foreground))" }}
           >
             {data[currentIndex].id}
-          </p>
+          </p> 
+          */}
           <p
             className="text-2xl sm:text-3xl md:text-4xl font-['Amiri'] leading-loose tracking-wide"
             style={{ color: "rgb(var(--color-card-foreground))" }}
@@ -34,6 +36,12 @@ function Card({ currentIndex, data, onNext, onPrev }) {
             style={{ color: "rgb(var(--color-card-foreground) / 0.8)" }}
           >
             {data[currentIndex].translation_en}
+          </p>
+          <p
+            className="text-lg xs:text-xl italic"
+            style={{ color: "rgb(var(--color-card-foreground) / 0.8)" }}
+          >
+            {data[currentIndex].source}
           </p>
         </div>
 
