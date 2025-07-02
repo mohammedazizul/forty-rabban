@@ -41,7 +41,6 @@ body {
 .card {
     background-color: rgb(var(--color-card));
     color: rgb(var(--color-card-foreground));
-    border-color: rgb(var(--color-border));
     box-shadow:
         0 10px 15px -3px rgb(var(--shadow-color) / var(--shadow-opacity)),
         0 4px 6px -4px rgb(var(--shadow-color) / var(--shadow-opacity)),

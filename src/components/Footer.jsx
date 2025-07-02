@@ -3,8 +3,15 @@ function Footer() {
     <footer className="w-full py-4 px-4 sm:px-6 md:px-8 mt-auto shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)]">
       <div className="max-w-2xl mx-auto">
         <div className="text-center text-sm space-y-2">
-          <p>© {new Date().getFullYear()} Forty Rabbana - 40 Beautiful Duas from Al Quran</p>
           <p>
+            © {new Date().getFullYear()} Forty Rabbana - 40 Beautiful Duas from
+            Al Quran
+          </p>
+          <p>
+            May Almighty Allah bless us with understanding and implementation of
+            these beautiful supplications
+          </p>
+          <p className="mt-2 text-xs opacity-80">
             Developed with ❤️ by{" "}
             <a
               href="https://www.linkedin.com/in/mohammedazizul/"
@@ -14,10 +21,6 @@ function Footer() {
             >
               Mohammed Azizul
             </a>
-            {" "}• Developer & Founder
-          </p>
-          <p className="mt-2 text-xs opacity-80">
-            May Almighty Allah bless us with understanding and implementation of these beautiful supplications
           </p>
         </div>
       </div>
