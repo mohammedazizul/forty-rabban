@@ -54,7 +54,7 @@ function Card({ currentIndex, data, onNext, onPrev }) {
           </span>
         </div>
 
-        <div className="absolute inset-0 flex items-center justify-between px-4">
+        <div className="absolute inset-0 flex items-center justify-between">
           <div
             onClick={onPrev}
             className="cursor-pointer hover:opacity-100 transition-opacity duration-200 opacity-30"

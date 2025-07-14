@@ -1,6 +1,3 @@
-import MoonSVG from "./SVG/MoonSVG";
-import SunSVG from "./SVG/SunSVG";
-
 function ThemeToggle({ isDarkMode, toggleTheme }) {
   return (
     <div className="absolute top-4 right-4 z-10">
@@ -11,9 +8,9 @@ function ThemeToggle({ isDarkMode, toggleTheme }) {
           backgroundColor: isDarkMode 
             ? 'rgb(209 213 219)' 
             : 'rgb(203 213 225)',
-          boxShadow: isDarkMode
-            ? '0 10px 15px -3px rgb(209 213 219 / 0.3), 0 4px 6px -4px rgb(209 213 219 / 0.3)'
-            : '0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)'
+          // boxShadow: isDarkMode
+          //   ? '0 10px 15px -3px rgb(209 213 219 / 0.3), 0 4px 6px -4px rgb(209 213 219 / 0.3)'
+          //   : '0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)'
         }}
         aria-label="Toggle dark mode"
       >
