@@ -31,6 +31,14 @@ function Card({ currentIndex, data, onNext, onPrev }) {
           >
             {data[currentIndex].arabic}
           </p>
+          <div className="py-2">
+            <p
+              className="text-lg sm:text-xl font-medium tracking-wide"
+              style={{ color: "rgb(var(--color-card-foreground) / 0.9)" }}
+            >
+              {data[currentIndex].transliteration}
+            </p>
+          </div>
           <p
             className="text-lg sm:text-xl italic"
             style={{ color: "rgb(var(--color-card-foreground) / 0.8)" }}
